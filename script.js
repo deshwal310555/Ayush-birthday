@@ -1,17 +1,20 @@
-// 🎁 On gift box click
 document.getElementById("giftBox").onclick = () => {
   document.getElementById("startScreen").classList.add("hidden");
   document.getElementById("soniyoooScene").classList.remove("hidden");
   createHearts();
+  startFloatingHearts();
+
+  // Start music on interaction
+  const music = new Audio("Assets/music.mp3");
+  music.loop = true;
+  music.play();
 };
 
-// ❤️ Create 5 clickable hearts
 function createHearts() {
-  const hearts = ["❤️", "❤️", "❤️", "❤️", "❤️"];
+  const hearts = ["❤️","❤️","❤️","❤️","❤️"];
   const container = document.getElementById("heartsContainer");
-  container.innerHTML = ""; // Clear if recreated
-
-  hearts.forEach((heart) => {
+  container.innerHTML = "";
+  hearts.forEach((heart, i) => {
     const span = document.createElement("span");
     span.innerText = heart;
     span.onclick = () => handleHeartClick(span);
@@ -31,16 +34,12 @@ function handleHeartClick(span) {
   }
 }
 
-// 👉 Next button after WAIT scene
 function goToBirthdayScene() {
   document.getElementById("waitScene").classList.add("hidden");
   document.getElementById("birthdayScene").classList.remove("hidden");
 }
 
-// 🎁 Gift question logic
 function giftResponse(wantsGift) {
-  // Hide gift question area
-  document.getElementById("giftQuestion").style.display = "none";
   document.getElementById("giftResponse").classList.remove("hidden");
 
   const text = document.getElementById("responseText");
@@ -54,7 +53,6 @@ function giftResponse(wantsGift) {
   } else {
     text.innerText = "pehle party do 😎";
     sweetImg.classList.add("hidden");
-
     setTimeout(() => {
       text.innerText = "Acha chlo de hi deti hu apne babu ko gift ☺️";
       clickBtn.classList.remove("hidden");
@@ -62,8 +60,20 @@ function giftResponse(wantsGift) {
   }
 }
 
-// 🎉 Final gift reveal
 function showGift() {
   document.getElementById("giftResponse").classList.add("hidden");
   document.getElementById("finalScene").classList.remove("hidden");
+}
+
+// Floating hearts generator
+function startFloatingHearts() {
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.innerText = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 10 + 20) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }, 500);
 }
