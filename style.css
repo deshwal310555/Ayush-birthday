@@ -1,64 +1,65 @@
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #ffe6f0;
+  background-color: #fff0f5;
   text-align: center;
-  padding: 20px;
   overflow-x: hidden;
 }
+
 .hidden {
   display: none;
 }
+
 .gift-box {
-  width: 200px;
+  width: 220px;
+  margin-top: 60px;
   cursor: pointer;
+  animation: bounce 2s infinite;
 }
-.hearts span {
-  display: inline-block;
-  font-size: 30px;
-  margin: 10px;
-  cursor: pointer;
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
-.soniyooo-scene {
-  animation: fadeIn 1s ease-in-out;
-}
-.birthday-scene {
-  animation: fadeIn 1s ease-in-out;
-}
-.slide-down {
-  animation: slideDown 2s ease-in-out forwards;
-}
-.slide-up {
-  animation: slideUp 2s ease-in-out forwards;
-}
-@keyframes slideDown {
-  from { transform: translateY(-100px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-@keyframes slideUp {
-  from { transform: translateY(100px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.floating-hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-.floating-hearts::before {
-  content: "❤️ ❤️ ❤️ ❤️ ❤️";
+
+.floating-heart {
   position: absolute;
-  font-size: 40px;
-  animation: floatHearts 5s linear infinite;
-  opacity: 0.4;
+  color: #ff4d88;
+  font-size: 24px;
+  animation: floatUp 4s linear infinite;
+  opacity: 0.7;
 }
-@keyframes floatHearts {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+button {
+  background-color: #ff66a3;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3385;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ffb3cc;
+  margin-top: 20px;
+  max-width: 90%;
 }
