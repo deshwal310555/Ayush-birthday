@@ -1,105 +1,113 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fff0f5;
-  text-align: center;
-  padding: 20px;
-  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff0f5;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 .hidden {
-  display: none;
+  display: none;
 }
 
 h1, h2, p {
-  color: #d63384;
+  color: #d63384;
 }
 
 button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 18px;
-  background-color: #ff66a3;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 25px;
+  margin: 10px;
+  font-size: 20px;
+  background-color: #ff66a3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #ff3385;
+  background-color: #ff3385;
 }
 
 img {
-  border-radius: 10px;
-  margin-top: 15px;
-  box-shadow: 0 0 10px #ffb3c6;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px #ffb3c6;
+  max-width: 90%;
+  height: auto;
 }
 
-/* Slide animations for final photo & reminder */
+/* Slide animations */
 .slide-down {
-  animation: slideDown 2s ease-in-out forwards;
+  animation: slideDown 2s ease-in-out forwards;
 }
-
 .slide-up {
-  animation: slideUp 2s ease-in-out forwards;
+  animation: slideUp 2s ease-in-out forwards;
 }
 
 @keyframes slideDown {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-/* Hearts shown to click (not floating) */
+/* Clickable hearts */
 .hearts span {
-  display: inline-block;
-  font-size: 35px;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.3s;
+  display: inline-block;
+  font-size: 40px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
-
 .hearts span:hover {
-  transform: scale(1.3);
+  transform: scale(1.3);
 }
 
-/* Floating background hearts */
+/* Floating hearts */
 .floating-heart {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
-  animation: floatUp 5s linear infinite;
-  opacity: 0.8;
-  z-index: 999;
-  pointer-events: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+  z-index: 999;
+  pointer-events: none;
 }
 
 @keyframes floatUp {
-  0% {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-100vh);
-    opacity: 0;
-  }
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* Enlarged response text */
+.big-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c2185b;
+  margin-top: 20px;
 }
