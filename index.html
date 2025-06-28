@@ -1,50 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Ayush 💖</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Start screen with gift box -->
   <div id="startScreen">
-    <h2>I have a surprise for u!</h2>
-    <img src="Assets/giftbox.jpg" class="gift-box" id="giftBox" alt="Gift Box">
-    <div class="floating-hearts"></div>
+    <img src="Assets/giftbox.jpg" id="giftBox" class="gift-box" alt="Gift Box" />
+    <p>I have a surprise for u!<br />Click on the gift</p>
   </div>
 
-  <div id="soniyoooScene" class="hidden soniyooo-scene">
+  <!-- Soniiyooo scene -->
+  <div id="soniyoooScene" class="hidden">
     <h2>Hii Soniyooo 🤗!!!</h2>
-    <img src="Assets/soniyooo_sticker.jpg" width="220" />
+    <img src="Assets/soniyooo_sticker.jpg" width="200" alt="Sticker" />
     <p>Click on heart one by one 😜</p>
     <div id="heartsContainer" class="hearts"></div>
   </div>
 
-  <div id="birthdayScene" class="hidden birthday-scene">
-    <h2>WAIT.... SOMEONE HAS BIRTHDAY TODAY!😉</h2>
+  <!-- Birthday scene -->
+  <div id="birthdayScene" class="hidden">
+    <h2>WAIT... SOMEONE HAS BIRTHDAY TODAY 🧐</h2>
     <h1>HAPPY BIRTHDAY AAYU BABY 🎂 🥳</h1>
     <p>Buddha hone lgra babu 🤣🤣</p>
-    <img src="Assets/cake.jpg" width="300" />
+    <img src="Assets/cake.jpg" width="300" alt="Cake" />
     <audio autoplay loop>
-      <source src="Assets/music.mp3" type="audio/mpeg">
+      <source src="Assets/music.mp3" type="audio/mpeg" />
     </audio>
   </div>
 
+  <!-- Gift Question -->
   <div id="giftQuestion" class="hidden">
     <p>Do u want gift cutiee??</p>
     <button onclick="giftResponse(true)">Dedo</button>
     <button onclick="giftResponse(false)">Nhi chahiye</button>
   </div>
 
+  <!-- Gift Response -->
   <div id="giftResponse" class="hidden">
     <p id="responseText"></p>
-    <button id="clickHereBtn" class="hidden" onclick="showGift()">Click here</button>
+    <button id="clickHereBtn" class="hidden" onclick="showGift()">Click Here</button>
   </div>
 
+  <!-- Final Scene -->
   <div id="finalScene" class="hidden">
-    <img src="Assets/gift_reminder.jpg" class="slide-down" width="300" />
-    <p class="slide-up">TUM KAISE BHUL JAATE HO KI MAI HI TOH HU TUMHARA GIFT 😉</p>
-    <img src="Assets/final_photo.jpg" class="slide-up" width="300" />
+    <img src="Assets/gift_reminder.jpg" width="300" class="slide-down" alt="Gift Reminder" />
+    <p style="margin-top: 20px;">TUM KAISE BHUL JAATE HO KI MAI HI TOH HU TUMHARA GIFT 😉</p>
+    <img src="Assets/final_photo.jpg" width="300" class="slide-up" alt="Final Photo" />
   </div>
 
   <script src="script.js"></script>
