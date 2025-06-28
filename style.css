@@ -1,99 +1,72 @@
-/* 🌸 General Page Styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #ffe6f0;
   text-align: center;
   padding: 20px;
-  margin: 0;
   overflow-x: hidden;
 }
 
-/* 🎁 Gift box styling */
-.gift-box {
-  width: 220px;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  margin-top: 50px;
+.hidden {
+  display: none;
 }
 
-/* ❤️ Heart styling */
+.gift-box {
+  width: 200px;
+  cursor: pointer;
+}
+
 .hearts span {
   display: inline-block;
   font-size: 30px;
   margin: 10px;
   cursor: pointer;
-  transition: transform 0.2s;
-}
-.hearts span:hover {
-  transform: scale(1.2);
 }
 
-/* 🎉 Hidden class to hide sections */
-.hidden {
-  display: none;
-}
-
-/* 🎊 Gift transition effects */
 .slide-down {
   animation: slideDown 2s ease-in-out forwards;
 }
+
 .slide-up {
   animation: slideUp 2s ease-in-out forwards;
 }
 
-/* ✨ Animations */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
 @keyframes slideDown {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: 0;
+  font-size: 25px;
+  animation: floatUp 5s linear infinite;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+@keyframes floatUp {
+  0% {
     transform: translateY(0);
     opacity: 1;
   }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
 }
 
-/* 🎀 Buttons */
 button {
+  font-size: 16px;
   padding: 10px 20px;
   margin: 10px;
-  font-size: 16px;
-  background-color: #ff66b2;
-  color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
+  background-color: #ff69b4;
+  color: white;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(255, 0, 102, 0.3);
-  transition: background 0.3s ease;
-}
-button:hover {
-  background-color: #ff3385;
-}
-
-/* 💖 Sticker and images */
-img {
-  border-radius: 12px;
-  margin-top: 15px;
-  box-shadow: 0 0 10px #ff99c8;
-  max-width: 90%;
 }
