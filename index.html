@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Start screen with gift box -->
+
+  <!-- 🎁 Start screen -->
   <div id="startScreen">
     <img src="Assets/giftbox.jpg" id="giftBox" class="gift-box" alt="Gift Box" />
     <p>I have a surprise for u!<br />Click on the gift</p>
   </div>
 
-  <!-- Soniyooo scene -->
+  <!-- 💖 Soniyooo scene -->
   <div id="soniyoooScene" class="hidden">
     <h2>Hii Soniyooo 🤗!!!</h2>
     <img src="Assets/soniyooo_sticker.jpg" width="200" alt="Sticker" />
@@ -21,13 +22,13 @@
     <div id="heartsContainer" class="hearts"></div>
   </div>
 
-  <!-- WAIT screen with Next -->
+  <!-- ⏳ Wait screen with Next button -->
   <div id="waitScene" class="hidden">
     <h2>WAIT... SOMEONE HAS BIRTHDAY TODAY 🤔</h2>
     <button onclick="goToBirthdayScene()">Next</button>
   </div>
 
-  <!-- Birthday scene -->
+  <!-- 🎂 Birthday scene -->
   <div id="birthdayScene" class="hidden">
     <h1>HAPPY BIRTHDAY AAYU BABY 🎂 🎉</h1>
     <p>Buddha hone lgra babu 🤣🤣</p>
@@ -35,25 +36,30 @@
     <audio autoplay loop>
       <source src="Assets/music.mp3" type="audio/mpeg" />
     </audio>
-    <p style="margin-top: 20px;">Do u want gift cutiee??</p>
-    <button onclick="giftResponse(true)">Dedo</button>
-    <button onclick="giftResponse(false)">Nhi chahiye</button>
+
+    <!-- 🎁 Gift Question -->
+    <div id="giftQuestion">
+      <p style="margin-top:20px;">Do u want gift cutiee??</p>
+      <button onclick="giftResponse(true)">Dedo</button>
+      <button onclick="giftResponse(false)">Nhi chahiye</button>
+    </div>
   </div>
 
-  <!-- Gift Response -->
-<div id="giftResponse" class="hidden">
-  <p id="responseText"></p>
-  <img src="Assets/kiss.gif" id="sweetImg" class="hidden" width="250" style="margin: 20px auto;" alt="Kiss Gif" />
-  <button id="clickHereBtn" class="hidden" onclick="showGift()">Click Here</button>
-</div>
+  <!-- 💌 Gift Response -->
+  <div id="giftResponse" class="hidden">
+    <p id="responseText"></p>
+    <img src="Assets/kiss.gif" id="sweetImg" class="hidden" width="250" style="margin: 20px auto;" alt="Kiss Gif" />
+    <button id="clickHereBtn" class="hidden" onclick="showGift()">Click Here</button>
+  </div>
 
-  <!-- Final Scene -->
+  <!-- 🎁 Final Gift Reveal -->
   <div id="finalScene" class="hidden">
     <img src="Assets/gift_reminder.jpg" width="300" class="slide-down" alt="Gift Reminder" />
     <p style="margin-top: 20px;">TUM KAISE BHUL JAATE HO KI MAI HI TOH HU TUMHARA GIFT 😉</p>
     <img src="Assets/final_photo.jpg" width="300" class="slide-up" alt="Final Photo" />
   </div>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
