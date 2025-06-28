@@ -70,3 +70,8 @@ button {
   color: white;
   cursor: pointer;
 }
+#responseText {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d63384;
+}
