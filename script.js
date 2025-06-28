@@ -5,9 +5,19 @@ document.getElementById("giftBox").onclick = () => {
   startFloatingHearts();
 
   // Start music on interaction
-  const music = new Audio("Assets/music.mp3");
-  music.loop = true;
-  music.play();
+  let music;
+document.getElementById("giftBox").onclick = () => {
+  document.getElementById("startScreen").classList.add("hidden");
+  document.getElementById("soniyoooScene").classList.remove("hidden");
+  createHearts();
+  startFloatingHearts();
+
+  // Start music only once
+  if (!music) {
+    music = new Audio("Assets/music.mp3");
+    music.loop = true;
+    music.play();
+  }
 };
 
 function createHearts() {
