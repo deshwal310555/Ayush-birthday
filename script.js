@@ -1,11 +1,5 @@
-document.getElementById("giftBox").onclick = () => {
-  document.getElementById("startScreen").classList.add("hidden");
-  document.getElementById("soniyoooScene").classList.remove("hidden");
-  createHearts();
-  startFloatingHearts();
+let music;
 
-  // Start music on interaction
-  let music;
 document.getElementById("giftBox").onclick = () => {
   document.getElementById("startScreen").classList.add("hidden");
   document.getElementById("soniyoooScene").classList.remove("hidden");
@@ -21,10 +15,10 @@ document.getElementById("giftBox").onclick = () => {
 };
 
 function createHearts() {
-  const hearts = ["❤️","❤️","❤️","❤️","❤️"];
+  const hearts = ["❤️", "❤️", "❤️", "❤️", "❤️"];
   const container = document.getElementById("heartsContainer");
   container.innerHTML = "";
-  hearts.forEach((heart, i) => {
+  hearts.forEach((heart) => {
     const span = document.createElement("span");
     span.innerText = heart;
     span.onclick = () => handleHeartClick(span);
@@ -50,6 +44,7 @@ function goToBirthdayScene() {
 }
 
 function giftResponse(wantsGift) {
+  document.getElementById("birthdayScene").classList.add("hidden");
   document.getElementById("giftResponse").classList.remove("hidden");
 
   const text = document.getElementById("responseText");
@@ -70,9 +65,9 @@ function giftResponse(wantsGift) {
   }
 }
 
-  function showGift() {
-  window.open("gift.html", "_blank"); // Opens new tab
-  }
+function showGift() {
+  window.open("gift.html", "_blank");
+}
 
 // Floating hearts generator
 function startFloatingHearts() {
@@ -81,7 +76,8 @@ function startFloatingHearts() {
     heart.className = "floating-heart";
     heart.innerText = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (Math.random() * 10 + 20) + "px";
+    heart.style.fontSize = Math.random() * 10 + 30 + "px"; // Larger size
+    heart.style.bottom = "0px"; // Start from bottom
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
   }, 500);
