@@ -10,7 +10,9 @@ document.getElementById("giftBox").onclick = () => {
   if (!music) {
     music = new Audio("Assets/music.mp3");
     music.loop = true;
-    music.play();
+    music.play().catch(() => {
+      console.log("Music playback blocked until user interaction.");
+    });
   }
 };
 
@@ -76,9 +78,9 @@ function startFloatingHearts() {
     heart.className = "floating-heart";
     heart.innerText = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 10 + 30 + "px"; // Larger size
-    heart.style.bottom = "0px"; // Start from bottom
+    heart.style.fontSize = Math.random() * 10 + 35 + "px"; // Increased minimum size
+    heart.style.bottom = "0px";
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
-  }, 500);
+  }, 400);
 }
