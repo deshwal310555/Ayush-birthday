@@ -70,10 +70,9 @@ function giftResponse(wantsGift) {
   }
 }
 
-function showGift() {
-  document.getElementById("giftResponse").classList.add("hidden");
-  document.getElementById("finalScene").classList.remove("hidden");
-}
+  function showGift() {
+  window.open("gift.html", "_blank"); // Opens new tab
+  }
 
 // Floating hearts generator
 function startFloatingHearts() {
