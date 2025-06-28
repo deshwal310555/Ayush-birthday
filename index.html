@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
     <p>I have a surprise for u!<br />Click on the gift</p>
   </div>
 
-  <!-- Soniiyooo scene -->
+  <!-- Soniyooo scene -->
   <div id="soniyoooScene" class="hidden">
     <h2>Hii Soniyooo 🤗!!!</h2>
     <img src="Assets/soniyooo_sticker.jpg" width="200" alt="Sticker" />
@@ -22,20 +21,21 @@
     <div id="heartsContainer" class="hearts"></div>
   </div>
 
-  <!-- Birthday scene -->
-  <div id="birthdayScene" class="hidden">
-    <h2>WAIT... SOMEONE HAS BIRTHDAY TODAY 🧐</h2>
-    <h1>HAPPY BIRTHDAY AAYU BABY 🎂 🥳</h1>
-    <p>Buddha hone lgra babu 🤣🤣</p>
-    <img src="Assets/cake.jpg" width="300" alt="Cake" />
-    <audio id="bgMusic" autoplay loop>
-      <source src="Assets/music.mp3" type="audio/mpeg" />
-    </audio>
+  <!-- WAIT screen with Next -->
+  <div id="waitScene" class="hidden">
+    <h2>WAIT... SOMEONE HAS BIRTHDAY TODAY 🤔</h2>
+    <button onclick="goToBirthday()">Next</button>
   </div>
 
-  <!-- Gift Question -->
-  <div id="giftQuestion" class="hidden">
-    <p>Do u want gift cutiee??</p>
+  <!-- Birthday scene -->
+  <div id="birthdayScene" class="hidden">
+    <h1>HAPPY BIRTHDAY AAYU BABY 🎂 🎉</h1>
+    <p>Buddha hone lgra babu 🤣🤣</p>
+    <img src="Assets/cake.jpg" width="300" alt="Cake" />
+    <audio autoplay loop>
+      <source src="Assets/music.mp3" type="audio/mpeg" />
+    </audio>
+    <p style="margin-top: 20px;">Do u want gift cutiee??</p>
     <button onclick="giftResponse(true)">Dedo</button>
     <button onclick="giftResponse(false)">Nhi chahiye</button>
   </div>
@@ -43,6 +43,7 @@
   <!-- Gift Response -->
   <div id="giftResponse" class="hidden">
     <p id="responseText"></p>
+    <img id="sweetImage" src="Assets/sweet.jpg" width="250" class="hidden" alt="Sweet" />
     <button id="clickHereBtn" class="hidden" onclick="showGift()">Click Here</button>
   </div>
 
