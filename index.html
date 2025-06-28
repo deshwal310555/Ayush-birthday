@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Ayush 💖</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Ayush 💖</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Start screen with gift box -->
-  <div id="startScreen">
-    <img src="Assets/giftbox.jpg" id="giftBox" class="gift-box" alt="Gift Box" />
-    <p>I have a surprise for u!<br />Click on the gift</p>
-  </div>
+  <!-- Start screen with gift box -->
+  <div id="startScreen">
+    <img src="Assets/giftbox.jpg" id="giftBox" class="gift-box" alt="Gift Box" />
+    <p>I have a surprise for u!<br />Click on the gift</p>
+  </div>
 
-  <!-- Soniyooo scene -->
-  <div id="soniyoooScene" class="hidden">
-    <h2>Hii Soniyooo 🤗!!!</h2>
-    <img src="Assets/soniyooo_sticker.jpg" width="200" alt="Soniyooo Sticker" />
-    <p>Click on heart one by one 😜</p>
-    <div id="heartsContainer" class="hearts"></div>
-  </div>
+  <!-- Soniyooo scene -->
+  <div id="soniyoooScene" class="hidden">
+    <h2>Hii Soniyooo 🤗!!!</h2>
+    <img src="Assets/soniyooo_sticker.jpg" width="200" alt="Soniyooo Sticker" />
+    <p>Click on heart one by one 😜</p>
+    <div id="heartsContainer" class="hearts"></div>
+  </div>
 
-  <!-- WAIT scene with Next -->
-  <div id="waitScene" class="hidden">
-    <h2>WAIT... SOMEONE HAS BIRTHDAY TODAY 🤔</h2>
-    <button onclick="goToBirthdayScene()">Next</button>
-  </div>
+  <!-- WAIT scene with Next -->
+  <div id="waitScene" class="hidden">
+    <h2>WAIT... SOMEONE HAS BIRTHDAY TODAY 🤔</h2>
+    <button onclick="goToBirthdayScene()">Next</button>
+  </div>
 
-  <!-- Birthday scene -->
-  <div id="birthdayScene" class="hidden">
-    <h1>HAPPY BIRTHDAY AAYU BABY 🎂 🎉</h1>
-    <p>Buddha hone lgra babu 🤣🤣</p>
-    <img src="Assets/cake.jpg" width="300" alt="Cake" />
-    <audio autoplay loop>
-      <source src="Assets/music.mp3" type="audio/mpeg" />
-    </audio>
-    <p style="margin-top: 20px;">Do u want gift cutiee??</p>
-    <button onclick="giftResponse(true)">Dedo</button>
-    <button onclick="giftResponse(false)">Nhi chahiye</button>
-  </div>
+  <!-- Birthday scene -->
+  <div id="birthdayScene" class="hidden">
+    <h1>HAPPY BIRTHDAY AAYU BABY 🎂 🎉</h1>
+    <p>Buddha hone lgra babu 🤣🤣</p>
+    <img src="Assets/cake.jpg" width="280" alt="Cake" />
+    <audio id="bgMusic" autoplay loop>
+      <source src="Assets/music.mp3" type="audio/mpeg" />
+    </audio>
+    <p style="margin-top: 20px;">Do u want gift cutiee??</p>
+    <button onclick="giftResponse(true)">Dedo</button>
+    <button onclick="giftResponse(false)">Nhi chahiye</button>
+  </div>
 
-  <!-- Gift Response -->
-  <div id="giftResponse" class="hidden">
-    <p id="responseText" class="big-text"></p>
-    <img src="Assets/kiss.gif" id="sweetImg" class="hidden" width="250" style="margin: 20px auto;" alt="Kiss Gif" />
-    <button id="clickHereBtn" class="hidden" onclick="showGift()">Click Here</button>
-  </div>
+  <!-- Gift Response -->
+  <div id="giftResponse" class="hidden">
+    <p id="responseText" class="big-text"></p>
+    <img src="Assets/kiss.gif" id="sweetImg" class="hidden" width="250" style="margin: 20px auto;" alt="Kiss Gif" />
+    <button id="clickHereBtn" class="hidden" onclick="showGift()">Click Here</button>
+  </div>
 
-  <!-- Final Scene -->
-  <div id="finalScene" class="hidden">
-    <img src="Assets/gift_reminder.jpg" width="300" class="slide-down" alt="Gift Reminder" />
-    <p style="margin-top: 20px;">TUM KAISE BHUL JAATE HO KI MAI HI TOH HU TUMHARA GIFT 😉</p>
-    <img src="Assets/final_photo.jpg" width="300" class="slide-up" alt="Final Photo" />
-  </div>
+  <!-- Final Scene (Only used inside gift.html now) -->
+  <div id="finalScene" class="hidden"></div>
 
-  <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
