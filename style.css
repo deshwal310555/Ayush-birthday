@@ -1,0 +1,64 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffe6f0;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+.hidden {
+  display: none;
+}
+.gift-box {
+  width: 200px;
+  cursor: pointer;
+}
+.hearts span {
+  display: inline-block;
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+.soniyooo-scene {
+  animation: fadeIn 1s ease-in-out;
+}
+.birthday-scene {
+  animation: fadeIn 1s ease-in-out;
+}
+.slide-down {
+  animation: slideDown 2s ease-in-out forwards;
+}
+.slide-up {
+  animation: slideUp 2s ease-in-out forwards;
+}
+@keyframes slideDown {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.floating-hearts::before {
+  content: "❤️ ❤️ ❤️ ❤️ ❤️";
+  position: absolute;
+  font-size: 40px;
+  animation: floatHearts 5s linear infinite;
+  opacity: 0.4;
+}
+@keyframes floatHearts {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
